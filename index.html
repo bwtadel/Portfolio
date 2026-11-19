@@ -1,0 +1,1091 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+</head>
+<body>
+<title>Adelia Rahman Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --cream:#fbf3ea;--paper:#fffdf8;--ink:#5b3424;--ink2:#6b3a26;--muted:#8a6a5a;
+  --pink:#e07aa6;--pink2:#f06aa0;--pink3:#b23f70;--pink4:#9a2257;--rose:#c6326e;--mauve:#8a3a5c;
+  --blush:#f7c9da;--blush2:#fbdde8;--blush3:#f5c2d5;
+  --green:#4e8f3e;--green2:#5ea04a;--green3:#7fc05e;--green4:#3f7f34;--leaf:#2f6e3a;
+  --mint:#ddefcf;--mint2:#c3e2ac;--mint3:#d6edc4;--lime:#9ed67a;
+  --gold1:#f9c96e;--gold2:#e9a23b;--lav:#e6dcf6;
+  --sh1:10px 22px 34px rgba(91,52,36,.10),4px 10px 18px rgba(91,52,36,.16);
+  --sh2:4px 10px 18px rgba(91,52,36,.16);
+  --serif:'Playfair Display',Georgia,serif;--sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;--script:'Pinyon Script','Snell Roundhand','Brush Script MT',cursive;
+}
+*{box-sizing:border-box}
+html{overflow-x:clip;scroll-behavior:auto}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;overflow-x:clip;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--cream);z-index:60}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.bg{position:fixed;inset:0;z-index:-1;pointer-events:none;background:var(--cream)}
+.bg i{position:absolute;inset:0;background-position:center;background-size:cover}
+.bg .l1,.bg .l2{display:none}
+.bg .l3{background-image:url(img/s2-light-dust.webp);opacity:.7}
+.in{max-width:1260px;margin:0 auto;padding-left:max(clamp(16px,4vw,56px),env(safe-area-inset-left,0px));padding-right:max(clamp(16px,4vw,56px),env(safe-area-inset-right,0px))}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* NAV */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(251,243,234,.96);border-bottom:1px solid rgba(224,122,166,.25)}
+.nav .in{display:flex;align-items:center;gap:18px;padding-top:8px;padding-bottom:8px}
+.brand{font-family:var(--script);font-size:30px;line-height:1;text-decoration:none;white-space:nowrap;color:var(--pink4)}
+.links{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0;padding:4px 0}
+.links::-webkit-scrollbar{display:none}
+.links a{white-space:nowrap;text-decoration:none;font-size:13px;font-weight:600;padding:6px 13px;border-radius:99px;color:var(--mauve);transition:background .25s,color .25s,transform .25s}
+.links a:hover{background:var(--blush2);transform:translateY(-1px) rotate(-1.5deg)}
+.links a.on{background:linear-gradient(135deg,var(--pink2),var(--rose));color:#fff;box-shadow:0 3px 8px rgba(198,50,110,.3)}
+
+/* TYPE */
+.kicker{font-size:13px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--pink3);margin:0 0 8px}
+.kicker.g{color:var(--green)}
+.script{font-family:var(--script);font-weight:400;line-height:1;background:linear-gradient(160deg,var(--pink2) 10%,var(--rose) 55%,var(--pink4));-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;filter:drop-shadow(1px 2px 0 var(--pink4)) drop-shadow(0 6px 8px rgba(154,34,87,.18));padding:.08em .12em .16em;display:inline-block}
+.script.green{background-image:linear-gradient(160deg,var(--lime) 5%,var(--green2) 55%,#7a5a3a);filter:drop-shadow(1px 2px 0 var(--green4)) drop-shadow(0 6px 8px rgba(63,127,52,.18))}
+.script.rainbow{background-image:linear-gradient(100deg,var(--pink4),var(--pink2) 35%,var(--gold1) 60%,var(--green2))}
+.t1{font-size:clamp(60px,11vw,132px)}.t2{font-size:clamp(48px,8vw,96px)}.t3{font-size:clamp(40px,6vw,72px)}
+.h2{font-family:var(--serif);font-weight:700;font-size:clamp(28px,4.4vw,46px);line-height:1.12;margin:0;letter-spacing:.02em;background:linear-gradient(100deg,var(--ink) 0%,var(--pink3) 55%,var(--gold2));-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;filter:drop-shadow(1.5px 3px 0 var(--blush)) drop-shadow(3px 8px 10px rgba(180,88,126,.18));text-transform:uppercase}
+.h2.g{background-image:linear-gradient(100deg,var(--leaf) 0%,var(--green2) 60%,var(--ink))}
+.lead{font-size:clamp(16px,1.7vw,19px);color:var(--ink2);max-width:60ch;margin:14px 0 0}
+.phead{padding:clamp(26px,5vw,56px) 0 clamp(18px,3vw,34px)}
+.phead .row{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 .3em}
+
+.page{padding:clamp(24px,4vw,56px) clamp(0px,2.6vw,36px) clamp(24px,4vw,48px);position:relative;scroll-margin-top:60px}
+.page{isolation:isolate}
+.page::before{content:"";position:absolute;z-index:-1;pointer-events:none;top:0;left:50%;width:100vw;margin-left:-50vw;height:100%;background:url(img/s3-light-top-left.webp) left top/100% auto no-repeat,url(img/s2-light-top-right.webp) right top/100% auto no-repeat,url(img/s2-background.webp) center/100% 100% no-repeat,var(--cream)}
+.sec{isolation:isolate}
+.decor{position:absolute;top:0;bottom:0;left:50%;width:100vw;margin-left:-50vw;z-index:-1;pointer-events:none;overflow:hidden}
+.pearl-line{position:absolute;left:0;right:0;height:24px;background:radial-gradient(circle at 50% 50%,#fff 0,#fdeaf1 16%,#f2b0ca 50%,#da7aa2 64%,transparent 67%) 0 0/24px 24px repeat-x;filter:drop-shadow(0 2px 2px rgba(154,34,87,.25))}
+.decor .pearls{position:absolute;width:min(340px,46vw);opacity:.95}
+.decor img{position:absolute}
+.decor .tw{position:absolute}
+.page+.page{border-top:2px dashed rgba(224,122,166,.4)}
+#home{padding-top:0}
+.wrap{padding-top:0;padding-bottom:24px}
+.sec{padding:clamp(34px,5vw,64px) 0;position:relative}
+.sec + .sec{border-top:2px dashed rgba(224,122,166,.35)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,56px);align-items:center}
+.grid2>*{min-width:0}
+@media(max-width:860px){.grid2{grid-template-columns:1fr}}
+
+/* PAPER, STICKIES, TAPE */
+.tape{position:relative}
+.tape::before{content:"";position:absolute;top:-14px;left:50%;width:96px;height:36px;background:var(--tp,url(img/s4-tape.webp)) center/contain no-repeat;transform:translateX(-50%) rotate(var(--tr,-3deg));z-index:2;pointer-events:none}
+.tape.gtape{--tp:url(img/s4-tape-1.webp)}
+.paper{background:var(--paper) radial-gradient(circle,#ecd9df 1.1px,transparent 1.4px) 0 0/17px 17px;border-radius:8px;box-shadow:var(--sh1);padding:clamp(22px,3.4vw,40px);position:relative;transform:rotate(var(--r,0deg))}
+.paper.kraft{background:url(img/s15-kraft-paper.webp) center/100% 100% no-repeat;box-shadow:none;filter:drop-shadow(4px 10px 12px rgba(91,52,36,.22));padding:clamp(34px,4vw,54px) clamp(30px,4vw,56px) clamp(60px,6vw,84px)}
+.paper.kraft::before{display:none}
+.entry+.entry{margin-top:26px;padding-top:24px;border-top:1.5px dashed rgba(178,63,112,.3)}
+.entry h3{font-family:var(--serif);font-size:clamp(20px,2.4vw,26px);line-height:1.2;margin:0;color:var(--pink4)}
+.entry .role{font-weight:600;margin:4px 0 0;color:var(--ink2)}
+.entry .meta{font-size:13px;color:var(--muted);margin:0 0 10px;font-weight:500;letter-spacing:.03em}
+.entry .top{display:flex;gap:16px;align-items:center;margin-bottom:6px}
+.entry .top img{width:64px;flex:none}
+ul.dots{list-style:none;margin:10px 0 0;padding:0}
+ul.dots li{position:relative;padding-left:22px;margin:7px 0;font-size:15.5px;line-height:1.55}
+ul.dots li::before{content:"";position:absolute;left:3px;top:.62em;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,var(--pink) 45%,var(--pink3))}
+.green ul.dots li::before,ul.dots.g li::before{background:radial-gradient(circle at 35% 30%,#fff,var(--green3) 45%,var(--green4))}
+.lbl{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--pink3);margin:0 0 6px}
+.lbl.g{color:var(--green)}
+.stk{position:relative;text-align:center;padding:20px 22px 16px;border-radius:6px;background:linear-gradient(165deg,var(--blush2),var(--blush));box-shadow:var(--sh2);transform:rotate(var(--r,0deg));min-width:130px}
+.stk.green{background:linear-gradient(165deg,var(--mint),var(--mint2));--tp:url(img/s4-tape-1.webp)}
+.stk.gold{background:linear-gradient(165deg,#fff1c9,#fbdc8c)}
+.stk.lav{background:linear-gradient(165deg,#f1eafc,var(--lav))}
+.stk b{display:block;font-family:var(--serif);font-size:clamp(30px,4vw,42px);line-height:1.05;color:var(--pink4)}
+.stk.green b{color:var(--leaf)}
+.stk span{display:block;font-weight:600;font-size:14px;color:var(--ink);margin-top:2px}
+.stk small{display:block;font-size:12px;color:var(--muted);margin-top:3px}
+.stk.tape::before{width:78px;height:28px;top:-12px}
+.stats{display:flex;flex-wrap:wrap;gap:22px 20px;justify-content:center;margin:26px 0}
+.pill{display:inline-block;padding:8px 20px;border-radius:99px;font-weight:700;font-size:15px;color:#fff;background:var(--pink);box-shadow:0 0 0 3px #fff,0 5px 10px rgba(91,52,36,.22);transform:rotate(var(--r,0deg));white-space:nowrap;transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.pill:hover{transform:rotate(0) scale(1.08)}
+.pill.p1{background:linear-gradient(135deg,#ec5e9c,#d6307a)}.pill.p2{background:linear-gradient(135deg,#5ea04a,#3f7f34)}.pill.p3{background:linear-gradient(135deg,#8cd069,#5ea04a)}.pill.p4{background:linear-gradient(135deg,#7a4630,#5b3424)}
+.pill.p5{background:var(--blush2);color:var(--pink4)}.pill.p6{background:var(--mint3);color:var(--leaf)}.pill.p7{background:var(--blush3);color:var(--pink4)}.pill.p8{background:linear-gradient(135deg,#f6b25c,#e9862d)}.pill.p9{background:linear-gradient(135deg,#b8a2e6,#8f74d4)}
+.pills{display:flex;flex-wrap:wrap;gap:16px 14px;justify-content:center;align-items:center}
+.pills.left{justify-content:flex-start}
+
+/* POLAROID / IMAGES */
+.tilt{transform:rotate(var(--r,0deg));transition:transform .45s cubic-bezier(.3,1.5,.5,1),filter .3s;width:var(--w,260px);max-width:100%;will-change:transform}
+.tilt:hover{transform:rotate(calc(var(--r,0deg) * -.7)) scale(1.06) translateY(-5px);position:relative;z-index:6}
+.rgal{container-type:inline-size;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:18px 16px;margin-top:14px}
+.rgal>div{flex:none}
+.rgal .tilt{display:block;width:auto;max-width:none;height:calc(var(--k,24.7)*1cqw)}
+@media(max-width:700px){.rgal{gap:14px 10px}.rgal .tilt{height:auto;width:calc(50cqw - 6px);max-width:100%}}
+.scrap{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px 0}
+.scrap .rv{margin:0 -4px}
+.scrap.gap{gap:16px 14px}
+.scrap.gap .rv{margin:0}
+.bob{animation:bob 6s ease-in-out infinite;animation-delay:var(--d,0s)}
+@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -9px}}
+.tw{position:absolute;pointer-events:none;animation:twk 3.4s ease-in-out infinite;animation-delay:var(--d,0s);width:var(--w,40px);z-index:1}
+@keyframes twk{0%,100%{opacity:.35;scale:.7;rotate:0deg}50%{opacity:1;scale:1.15;rotate:18deg}}
+.sway{transform-origin:50% 0}
+.sway:hover{animation:sway 1.6s ease-in-out}
+@keyframes sway{0%,100%{rotate:0deg}20%{rotate:4deg}45%{rotate:-3.5deg}70%{rotate:2deg}}
+.deco{position:absolute;pointer-events:none;z-index:0}
+
+/* HOME */
+.hero{display:grid;grid-template-columns:minmax(230px,.8fr) 1.4fr;gap:clamp(18px,5vw,70px);align-items:center;padding:clamp(34px,6vw,76px) 0 clamp(30px,5vw,60px);position:relative}
+.hero-art{position:relative;justify-self:center;width:min(300px,64vw)}
+.hero-art .strip{width:100%}
+.hero-art .clip{position:absolute;width:30%;top:-9%;left:34%;transform:rotate(-4deg)}
+.hero-art .bow{position:absolute;width:40%;bottom:-6%;right:-14%;transform:rotate(8deg)}
+.hero-art .hg{position:absolute;width:15%;top:2%;right:-30%}
+.hero-art .hp{position:absolute;width:13%;bottom:12%;left:-24%}
+.hero-pearls{position:absolute;right:-30px;top:6px;width:min(380px,50%);opacity:.9;pointer-events:none}
+.hero-txt{position:relative;z-index:2;min-width:0}
+.name{font-family:var(--serif);font-weight:700;font-size:clamp(34px,6.4vw,82px);line-height:1.05;margin:0;letter-spacing:.05em;background:linear-gradient(100deg,var(--ink) 0%,var(--pink3) 50%,var(--gold2));-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;filter:drop-shadow(1.5px 3px 0 var(--blush)) drop-shadow(3px 8px 10px rgba(180,88,126,.18))}
+.tag{font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--green);font-size:clamp(12px,1.7vw,18px);margin:6px 0 24px}
+.foot{font-size:15px;color:var(--ink2);display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin:0}
+.btn{font:600 13px var(--sans);border:0;background:linear-gradient(135deg,var(--pink2),var(--rose));color:#fff;padding:7px 16px;border-radius:99px;cursor:pointer;box-shadow:0 4px 10px rgba(198,50,110,.28);transition:transform .25s}
+.btn:hover{transform:translateY(-2px) rotate(-2deg)}
+.btn.out{background:#fff;color:var(--pink4);box-shadow:0 0 0 2px var(--blush),0 4px 10px rgba(91,52,36,.12)}
+.contents{display:grid;grid-template-columns:minmax(220px,.7fr) 1.6fr;gap:clamp(20px,5vw,70px);align-items:center;padding:clamp(24px,4vw,50px) 0;border-top:2px dashed rgba(224,122,166,.35)}
+@media(max-width:760px){.hero,.contents{grid-template-columns:1fr}.hero-art{margin-bottom:24px}}
+.arch{position:relative;width:min(260px,62vw);justify-self:center;aspect-ratio:526/896}
+.arch .fr{position:absolute;inset:0;width:100%;height:100%}
+.arch .ph{position:absolute;left:50%;bottom:-2%;height:94%;width:auto;max-width:none;transform:translateX(-50%)}
+.toc{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(5,auto);grid-auto-flow:column;gap:6px 36px;list-style:none;margin:20px 0 0;padding:0}
+@media(max-width:600px){.toc{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row}}
+.toc a{display:flex;align-items:baseline;gap:14px;padding:10px 0;text-decoration:none;font-weight:600;font-size:clamp(16px,1.9vw,20px);border-bottom:1.5px dotted rgba(178,63,112,.3);transition:transform .3s,color .3s}
+.toc a:hover{transform:translateX(8px);color:var(--pink4)}
+.toc em{font-style:normal;font-family:var(--serif);font-size:1.5em;line-height:1;background:linear-gradient(160deg,var(--pink2),var(--pink4));-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.toc li.g em{background-image:linear-gradient(160deg,var(--green3),var(--green4))}
+
+/* ABOUT */
+.oval{position:relative;width:min(400px,80vw);aspect-ratio:640/880;justify-self:center}
+.oval .fr{position:absolute;inset:0;width:100%;height:100%}
+.oval .ph{position:absolute;left:50%;bottom:-3%;height:104%;width:auto;max-width:none;transform:translateX(-50%)}
+.oval .bw{position:absolute;width:24%;top:2%;right:-3%;transform:rotate(14deg);z-index:2}
+.about p{margin:0 0 14px;font-size:clamp(15.5px,1.6vw,17.5px);max-width:58ch}
+.contact-line{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:14.5px;color:var(--ink2);margin-top:6px}
+.contact-line span{white-space:normal;overflow-wrap:anywhere}
+
+/* EDUCATION */
+.edu{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(24px,4vw,56px);align-items:start}
+.edu>*{min-width:0}
+.collage{position:relative;aspect-ratio:495/540}
+.collage>div{position:absolute}
+@media(max-width:900px){.edu{grid-template-columns:1fr}}
+.ecard{display:flex;gap:18px;align-items:center;background:linear-gradient(180deg,#fff,#fdf6f0);border:4px solid var(--blush);border-radius:22px;box-shadow:0 6px 0 #e7a7c0,var(--sh2);padding:20px 24px;margin-bottom:26px;transform:rotate(var(--r,0deg));transition:transform .4s cubic-bezier(.3,1.5,.5,1)}
+.ecard:hover{transform:rotate(0) scale(1.02)}
+.ecard.g{border-color:var(--mint2);box-shadow:0 6px 0 #9fcb85,var(--sh2)}
+.ecard img{width:74px;flex:none}
+.ecard img.smk{width:96px}
+.ecard h3{margin:0;font-size:clamp(14px,1.6vw,17px);letter-spacing:.14em;text-transform:uppercase;color:var(--pink4);font-weight:700}
+.ecard p{margin:3px 0 0;font-size:15px}
+.ecard .yr{font-weight:600;color:var(--muted);font-size:13.5px}
+
+/* SKILLS */
+.tools{display:grid;grid-template-columns:repeat(6,1fr);gap:16px 10px}
+@media(max-width:640px){.tools{grid-template-columns:repeat(3,1fr)}}
+.tools figure{margin:0;text-align:center}
+.tools img{width:min(74px,100%);margin:0 auto;transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+.tools figure:hover img{transform:translateY(-6px) rotate(-6deg) scale(1.1)}
+.tools figcaption{font-size:12px;font-weight:600;color:var(--ink2);margin-top:4px;line-height:1.25}
+/* ===== Skills slide (matches Figma 1226x686) ===== */
+#skills{padding:0}
+.slide{position:relative;container-type:inline-size;width:100vw;margin-left:calc(50% - 50vw);aspect-ratio:1226/686;background:url(img/s5-stripes.webp) right top/auto 100% no-repeat}
+.slide>*{position:absolute}
+.sk-title{left:4.7%;top:4.5%;margin:0;line-height:1;pointer-events:none}
+.sk-title .script{display:block;white-space:nowrap;line-height:.82}
+.sk-t1{font-size:10.5cqw}
+.sk-t2{font-size:9cqw;margin:-.5cqw 0 0 8cqw}
+.sk-left{left:0;top:0;width:100%;height:100%;pointer-events:none}
+.sk-left>*{position:absolute;margin:0}
+.sk-left .lbl{left:6.2%;top:39.6%;font-size:1.05cqw;letter-spacing:.2em}
+.sk-tools{left:5.3%;top:42.1%;display:grid;grid-template-columns:repeat(6,6.2cqw);grid-auto-rows:6.2cqw;gap:0}
+.sk-tools figure{margin:0;display:grid;place-items:center;pointer-events:auto}
+.sk-tools img{width:6.4cqw;max-width:none;margin:0}
+.sk-tools figcaption{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.sk-left .sk-lbl2{top:78.2%}
+.sk-lang{left:6.2%;font-size:1.25cqw;line-height:1.65;color:var(--ink2)}
+.sk-lang.l1{top:81.6%}
+.sk-lang.l2{top:84.6%}
+.sk-lang b{color:var(--ink)}
+.cardzone{inset:0;pointer-events:none}
+.cardzone>*{position:absolute;pointer-events:auto}
+.cardzone .env{left:60.8%;width:33.4%;bottom:0;height:auto;pointer-events:none}
+.pill.sk{left:var(--x);top:var(--y);transform:translate(-50%,-50%) rotate(var(--r,0deg));font-size:1.33cqw;padding:.5em 1.25em;z-index:2;box-shadow:0 0 0 .24cqw #fff,0 .4cqw .9cqw rgba(91,52,36,.22)}
+.pill.sk:hover{transform:translate(-50%,-50%) rotate(0) scale(1.08)}
+.cardzone .burst{left:93%;top:11.7%;width:9.2cqw}
+.cardzone .burst b{font-size:1.4cqw}
+.dc{left:var(--x);top:var(--y);width:var(--w,auto);height:auto;transform:translate(-50%,-50%)}
+.bowd{--x:90.9%;--y:71%;--w:8.6cqw;--mx:80%;--my:69%;--mw:16cqw;z-index:3}
+.flow{--x:58.1%;--y:94%;--w:4cqw;--mx:7%;--my:92%;--mw:12cqw}
+.heart{--x:95.8%;--y:86%;--w:4.5cqw;--mx:92%;--my:86%;--mw:11cqw;z-index:3}
+@media(max-width:860px){
+  .slide{width:100%;margin-left:0;aspect-ratio:auto;background:none;display:block;padding:clamp(24px,6vw,40px) 0 0}
+  .slide>*{position:static}
+  .sk-title{margin-bottom:8px}
+  .sk-t1{font-size:clamp(56px,17vw,100px)}.sk-t2{font-size:clamp(46px,14vw,84px);margin-left:14%}
+  .sk-left{height:auto}
+  .sk-left>*{position:static}
+  .sk-left .lbl{font-size:12px;margin:18px 0 10px}
+  .sk-tools{grid-template-columns:repeat(6,1fr);grid-auto-rows:auto;gap:8px 4px}
+  .sk-tools img{width:min(52px,100%)}
+  .sk-lang{font-size:15px;line-height:1.7}
+  .cardzone{position:relative;container-type:inline-size;width:100vw;margin:24px 0 0 calc(50% - 50vw);aspect-ratio:702/806;background:url(img/s5-stripes.webp) center/cover}
+  .cardzone>*{position:absolute}
+  .cardzone .env{left:18%;width:70%}
+  .pill.sk{left:var(--mx);top:var(--my);font-size:max(9.5px,2.1cqw);box-shadow:0 0 0 3px #fff,0 5px 10px rgba(91,52,36,.22)}
+  .cardzone .burst{left:86%;top:10%;width:17cqw}.cardzone .burst b{font-size:max(9px,2.2cqw)}
+  .dc{left:var(--mx);top:var(--my);width:var(--mw,auto)}
+}
+.postcard{position:relative;z-index:1;width:100%;aspect-ratio:702/806;container-type:size;container-name:pc}
+.postcard>*{position:absolute}
+.postcard .env{height:auto}
+.postcard .env.bob{animation:none}
+.postcard .dec{height:auto;width:auto}
+.postcard .pill{transform:translate(-50%,-50%) rotate(var(--r,0deg));font-size:max(9.5px,2.1cqw);padding:.5em 1.2em;z-index:2}
+.postcard .pill:hover{transform:translate(-50%,-50%) rotate(0) scale(1.08)}
+.postcard .dec,.postcard .tw{transform:translate(-50%,-50%)}
+.burst{display:grid;place-items:center;width:17cqw;aspect-ratio:1;transform:translate(-50%,-50%) rotate(-12deg);background:linear-gradient(160deg,#f9c96e,#e9a23b);clip-path:polygon(50% 0,59% 9%,70% 4%,75% 15%,87% 14%,87% 26%,98% 30%,93% 42%,100% 52%,91% 61%,95% 73%,83% 76%,80% 88%,68% 87%,60% 97%,50% 90%,40% 97%,32% 87%,20% 88%,17% 76%,5% 73%,9% 61%,0 52%,7% 42%,2% 30%,13% 26%,13% 14%,25% 15%,30% 4%,41% 9%);z-index:3;filter:none}
+.burst b{font-size:max(9px,2.2cqw);color:#fff;line-height:1.15;text-align:center;font-weight:700}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 14px;margin:6px auto 30px;max-width:980px}
+.chip{display:block;text-decoration:none;padding:9px 18px;border-radius:12px;background:var(--bg,var(--blush3));box-shadow:var(--sh2);transform:rotate(var(--r,0deg));transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+.chip:hover{transform:rotate(0) scale(1.07)}
+.chip b{display:block;font-size:14px;line-height:1.25}.chip span{display:block;font-size:12px;color:var(--ink2)}
+.envelope{position:relative;padding:clamp(20px,3vw,34px) 0;background:linear-gradient(90deg,transparent,rgba(247,201,218,.55) 12%,rgba(247,201,218,.55) 88%,transparent);border-radius:30px}
+.envelope .env{width:min(300px,70%);margin:0 auto 6px}
+.langs{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
+.lang{background:#fff;border:2px solid var(--blush);border-radius:14px;padding:8px 18px;font-weight:600;font-size:15px;box-shadow:var(--sh2)}
+.lang small{display:block;font-weight:500;color:var(--muted);font-size:12.5px}
+
+/* JOURNEY */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:34px 0;align-items:stretch}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.cards{grid-template-columns:1fr}}
+.jc{position:relative;display:flex;justify-content:center;padding:14px 12px 0}
+.jc::before{content:"";position:absolute;left:0;right:0;top:12px;height:3px;border-radius:3px;background:linear-gradient(#d9b48a,#b58a5c);box-shadow:0 2px 3px rgba(91,52,36,.25)}
+.jc .sway{position:relative;z-index:1;width:min(330px,100%);display:flex}
+.jc .sway .jcard{width:100%}
+.jc img{width:100%}
+.jcard{position:relative;background:#fffdf8;border-radius:6px;box-shadow:var(--sh1);transform:rotate(var(--r,0deg));min-height:400px;padding-bottom:84px;transition:transform .45s cubic-bezier(.3,1.5,.5,1)}
+.jcard:hover{transform:rotate(calc(var(--r,0deg) * -.6)) scale(1.04)}
+.jcard h3{margin:0;padding:30px 0 12px;text-align:center;font-family:var(--serif);font-size:46px;line-height:1;color:var(--pink4);background:linear-gradient(#f9cfe0,#f3b3cd);border-radius:6px 6px 0 0;text-shadow:2px 3px 3px rgba(154,34,87,.25)}
+.jcard.gr h3{color:var(--leaf);background:linear-gradient(#dcf1c9,#c0e3a6);text-shadow:2px 3px 3px rgba(47,110,58,.25)}
+.jl{list-style:none;margin:0;padding:6px 0 0}
+.jl li{padding:10px 20px 9px;border-bottom:1px solid rgba(178,63,112,.14)}
+.jl li:last-child{border-bottom:0}
+.jl b{display:block;font-size:14.5px;line-height:1.3;color:var(--ink)}
+.jl span{display:block;font-size:14px;color:var(--pink3);line-height:1.3}
+.jcard.gr .jl span{color:var(--green)}
+.jcard .lg{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);height:78px;width:auto;max-width:92%}
+.cp{position:absolute;top:-30px;left:9%;width:22px;height:78px;border-radius:7px 7px 5px 5px;background:linear-gradient(90deg,#e6b878,#cf9650 55%,#b87c3a);transform:rotate(14deg);box-shadow:2px 3px 5px rgba(0,0,0,.28);z-index:3}
+.cp::after{content:"";position:absolute;left:50%;top:10px;width:2px;height:34px;margin-left:-1px;background:rgba(80,40,10,.45);border-radius:2px}
+.glance{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 34px;margin:44px 0 0;padding:20px 28px;border-radius:20px;background:linear-gradient(135deg,#f7bfd5,#f9d4e2);box-shadow:var(--sh2)}
+.glance .lb{font-size:12px;font-weight:700;letter-spacing:.25em;color:var(--pink4)}
+.glance div{font-size:14px;font-weight:500;color:var(--ink2)}
+.glance b{font-family:var(--serif);font-size:30px;color:var(--pink4);margin-right:6px;font-weight:700;line-height:1}
+.glance div,.glance .lb{display:flex;align-items:center;line-height:1}
+.glance{padding:26px 28px}
+
+/* DIVIDER */
+.divider{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(20px,4vw,50px);align-items:center;padding:clamp(24px,4vw,50px) 0}
+@media(max-width:860px){.divider{grid-template-columns:1fr}}
+.divider .lead{max-width:44ch}
+.divider .photos{position:relative}
+.gtags{font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green);font-size:13px;margin:12px 0 0}
+.hangrow{position:relative;display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:0 clamp(6px,2vw,28px);padding-top:0;margin-bottom:10px}
+.hangrow::before{content:"";position:absolute;left:-60px;right:-60px;top:30px;height:3px;border-radius:3px;background:linear-gradient(#d9b48a,#b58a5c);box-shadow:0 2px 3px rgba(91,52,36,.25)}
+.hangrow a{display:block;text-decoration:none;position:relative}
+.hangrow .tilt{width:min(var(--w,240px),42vw)}
+
+/* PROJECTS */
+.cs{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(24px,4vw,56px);align-items:start;margin-top:26px}
+.cs>*{min-width:0}
+@media(max-width:900px){.cs{grid-template-columns:1fr}}
+.programs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 14px;margin-top:22px}
+@media(max-width:480px){.programs{grid-template-columns:1fr}}
+.prog{border-radius:99px;padding:12px 24px;box-shadow:0 0 0 4px #fff,var(--sh2);transform:rotate(var(--r,0deg));transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.prog:hover{transform:rotate(0) scale(1.05)}
+.prog b{display:block;font-family:var(--sans);font-weight:700;font-size:18px;line-height:1.25}
+.prog span{font-size:13.5px;font-weight:500}
+.prog.a{background:linear-gradient(135deg,#fbd0e1,#f7b6d0);color:var(--pink4)}
+.prog.b{background:linear-gradient(135deg,#d6edc4,#b8de9d);color:var(--leaf)}
+.prog.c{background:linear-gradient(135deg,#fde2b3,#f9c985);color:#8a4a12}
+.prog.d{background:linear-gradient(135deg,#eadffb,#d4c4f1);color:#5b3b94}
+.tickets{display:grid;grid-template-columns:repeat(4,1fr);gap:34px 22px;margin-top:10px}
+@media(max-width:1000px){.tickets{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){.tickets{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.tickets{grid-template-columns:1fr}}
+.tk{display:flex;flex-direction:column;align-items:center;gap:14px}
+.ticket{position:relative;width:100%;max-width:300px;filter:drop-shadow(3px 7px 9px rgba(91,52,36,.2));transform:rotate(var(--r,0deg));transition:transform .4s cubic-bezier(.3,1.5,.5,1)}
+.ticket:hover{transform:rotate(0) scale(1.04)}
+.ticket>div{padding:16px 24px 14px;border-radius:14px;background:var(--bg,var(--blush3));-webkit-mask:radial-gradient(circle at 0 50%,#0000 10px,#000 10.5px) left/51% 100% no-repeat,radial-gradient(circle at 100% 50%,#0000 10px,#000 10.5px) right/51% 100% no-repeat;mask:radial-gradient(circle at 0 50%,#0000 10px,#000 10.5px) left/51% 100% no-repeat,radial-gradient(circle at 100% 50%,#0000 10px,#000 10.5px) right/51% 100% no-repeat;border-right:0;position:relative}
+.ticket b{display:block;font-size:15px;line-height:1.3;color:var(--ink)}
+.ticket span{display:block;font-size:13px;color:var(--ink2);line-height:1.35;margin-top:2px}
+.ticket small{display:block;font-size:12px;font-weight:700;color:var(--tc,var(--pink4));margin-top:8px}
+.sticky-note{background:linear-gradient(165deg,#fff2c2,#fbdc8c);padding:30px 26px;border-radius:4px;box-shadow:var(--sh2);transform:rotate(var(--r,0deg));width:min(240px,100%);text-align:left}
+.sticky-note b{font-family:var(--serif);font-size:22px;line-height:1.15;color:#6b3a26;text-transform:uppercase;display:block}
+.sticky-note small{display:block;margin-top:8px;color:var(--ink2);font-size:13px}
+.skillnote{background:linear-gradient(165deg,var(--blush2),var(--blush));padding:30px 26px 22px;border-radius:4px;box-shadow:var(--sh2);transform:rotate(var(--r,0deg))}
+.skillnote.green{background:linear-gradient(165deg,var(--mint),var(--mint2))}
+.skillnote ul{list-style:none;margin:6px 0 0;padding:0}
+.skillnote li{font-size:14.5px;padding:3px 0 3px 18px;position:relative}
+.skillnote li::before{content:"•";position:absolute;left:3px;color:var(--pink3)}
+.skillnote.green li::before{color:var(--green4)}
+.lead-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(24px,4vw,56px);align-items:start}
+.lead-grid>*{min-width:0}
+.lp1{display:flex;flex-direction:column;gap:24px;margin-top:26px}
+.lp1row{display:grid;grid-template-columns:.85fr 1.15fr;gap:18px;align-items:center}
+.five{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;align-items:center;margin-top:22px}
+.five .sticky-note{justify-self:center;align-self:center}
+@media(max-width:800px){.five{grid-template-columns:repeat(2,minmax(0,1fr))}.five .sticky-note{grid-column:1/-1}}
+#lead3 .lead-grid>.skillnote{align-self:stretch;display:flex;flex-direction:column;justify-content:center}
+.five figure{margin:0}
+.five .pframe.cap{padding-bottom:68px}
+.five .pframe figcaption{bottom:10px;line-height:1.1}
+.five .pframe,.five .sticky-note{box-sizing:border-box;width:100%;max-width:100%}
+.five .sticky-note{padding-inline:16px}
+#lead1 .stats{flex-wrap:nowrap;gap:12px}#lead1 .stk{flex:1 1 0;min-width:0;padding-inline:8px}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}}
+.logo-t{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:6px}
+.logo-t>img{width:92px}
+.lt{position:relative;width:92px;flex:none}.lt img{width:100%}.lt .lg{position:absolute;left:16.6%;top:12.6%;width:60%;height:auto;object-fit:contain}
+.pframe{position:relative;background:var(--paper);padding:10px 10px 36px;box-shadow:var(--sh1);transform:rotate(var(--r,0deg));transition:transform .45s cubic-bezier(.3,1.5,.5,1);width:var(--w,260px);max-width:100%;border:2px dashed var(--blush)}
+.pframe:hover{transform:rotate(calc(var(--r,0deg) * -.7)) scale(1.05) translateY(-5px);z-index:6}
+.pframe img{width:100%;aspect-ratio:var(--ar,4/3);object-fit:cover}
+.pframe figcaption{position:absolute;left:0;right:0;bottom:8px;text-align:center;font-family:var(--script);font-size:25px;line-height:1;color:var(--pink4)}
+.pframe::before{content:"";position:absolute;top:-14px;left:50%;width:88px;height:32px;background:var(--tp,url(img/s4-tape.webp)) center/contain no-repeat;transform:translateX(-50%) rotate(-3deg)}
+.pframe.gtape{--tp:url(img/s4-tape-1.webp);border-color:var(--mint2)}
+.pframe figcaption small{display:block;font-family:var(--sans);font-size:11.5px;font-weight:600;color:var(--muted);letter-spacing:.03em}
+.pframe.cap{padding-bottom:58px}
+
+/* ACHIEVEMENTS */
+.ach{max-width:860px;margin:0 auto}
+.ach .paper{padding:clamp(28px,5vw,60px) clamp(22px,5vw,64px)}
+.award{display:flex;gap:clamp(16px,3vw,30px);align-items:center;padding:clamp(18px,2.6vw,28px) 0}
+.award+.award{border-top:2px dashed rgba(178,63,112,.25)}
+.award img{width:clamp(66px,9vw,96px);flex:none;transition:transform .4s cubic-bezier(.3,1.6,.5,1)}
+.award:hover img{transform:rotate(-10deg) scale(1.12)}
+.award h3{margin:0;font-family:var(--serif);font-size:clamp(21px,3.2vw,32px);line-height:1.2;color:var(--pink4)}
+.award p{margin:4px 0 0;font-size:clamp(14.5px,1.8vw,18px);color:var(--ink2)}
+
+/* CONNECT */
+.cn{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(24px,5vw,70px);align-items:center}
+.cn>*{min-width:0}
+@media(max-width:860px){.cn{grid-template-columns:1fr}}
+.crow{display:flex;align-items:center;gap:16px;padding:10px 0}
+.crow img{width:56px;flex:none}
+.crow .v{font-weight:600;font-size:clamp(15px,2vw,19px);overflow-wrap:anywhere;min-width:0}
+.crow .v a{text-decoration:none;border-bottom:2px solid var(--blush)}
+.crow .v a:hover{border-color:var(--pink)}
+.crow .btn{margin-left:auto;flex:none}
+.cn-art{position:relative;justify-self:center;width:min(340px,80vw);padding-bottom:40px}
+.cn-art .ph{width:78%;margin-left:auto}
+.cn-art .pr{position:absolute;left:-8%;bottom:0;width:62%}
+
+/* FOOT */
+.next{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:34px 0 8px;margin-top:26px;border-top:2px dashed rgba(224,122,166,.35)}
+.next a{text-decoration:none;font-weight:600;color:var(--pink4);padding:10px 20px;border-radius:99px;background:#fff;box-shadow:0 0 0 2px var(--blush),0 4px 10px rgba(91,52,36,.1);transition:transform .3s}
+.next a:hover{transform:translateY(-3px) rotate(-1.5deg)}
+.copyr{text-align:center;font-size:12.5px;color:var(--muted);padding:12px 0 30px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+
+<div class="bg" aria-hidden="true"><i class="l1"></i><i class="l2"></i><i class="l3"></i></div>
+
+<header class="nav"><div class="in">
+  <a class="brand" href="#home">Adelia Rahman</a>
+  <nav class="links" id="links" aria-label="Pages">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#journey">Journey</a><a href="#work">Work</a><a href="#projects">Projects</a><a href="#leadership">Leadership</a><a href="#achievements">Achievements</a><a href="#connect">Connect</a>
+  </nav>
+</div></header>
+
+<main class="in">
+
+<!-- ================= HOME ================= -->
+<section class="page" id="home" data-title="Home">
+  <div class="decor" aria-hidden="true"><i class="pearl-line" style="top:12px"></i></div>
+  <div class="hero">
+    
+    <div class="hero-art rv">
+      <div class="bob"><img class="strip tilt" style="--r:-4deg;--w:100%" src="img/s1-photo-strip.webp" alt="Photo strip of Adelia Rahman"></div>
+      <img class="clip" src="img/s1-clip.webp" alt="" aria-hidden="true">
+      <img class="bow" src="img/s1-bow.webp" alt="" aria-hidden="true">
+      <img class="hg bob" style="--d:.5s" src="img/s1-heart-gold.webp" alt="" aria-hidden="true">
+      <img class="hp bob" style="--d:1.2s" src="img/s1-heart-pink.webp" alt="" aria-hidden="true">
+    </div>
+    <div class="hero-txt">
+      <p class="kicker rv">Portfolio · 2026</p>
+      <h1 class="name rv">ADELIA RAHMAN</h1>
+      <div class="script t1 rv" role="presentation">Portfolio</div>
+      <p class="tag rv">Event Operations &amp; Management</p>
+      <p class="foot rv"><span>adelrhmn28@gmail.com · linkedin.com/in/adelrhmn</span><button class="btn out" data-copy="adelrhmn28@gmail.com">Copy email</button></p>
+    </div>
+    <img class="tw" style="--w:44px;left:2%;top:10%" src="img/s1-twinkle.webp" alt="" aria-hidden="true">
+    <img class="tw" style="--w:34px;--d:1s;left:46%;top:6%" src="img/s1-twinkle-1.webp" alt="" aria-hidden="true">
+    <img class="tw" style="--w:30px;--d:.4s;right:6%;bottom:12%" src="img/s1-twinkle-2.webp" alt="" aria-hidden="true">
+    <img class="tw" style="--w:36px;--d:1.8s;left:38%;bottom:6%" src="img/s1-spark.webp" alt="" aria-hidden="true">
+  </div>
+
+  <div class="contents">
+    <div class="arch rv">
+      <img class="fr" src="img/s2-arch-frame.webp" alt="">
+      <img class="ph" src="img/s2-foto-kebaya-cutout.webp" alt="Adelia in a batik kebaya">
+    </div>
+    <div>
+      <div class="script t2 rv">Contents</div>
+      <p class="lead rv" style="margin-top:0">A quick map of my journey in events, tourism, and leadership.</p>
+      <ol class="toc">
+        <li class="rv"><a href="#about"><em>01</em> About Me</a></li>
+        <li class="rv"><a href="#education"><em>02</em> Education &amp; Certifications</a></li>
+        <li class="rv"><a href="#skills"><em>03</em> Skills &amp; Tools</a></li>
+        <li class="rv"><a href="#journey"><em>04</em> My Journey</a></li>
+        <li class="rv"><a href="#work"><em>05</em> Work Experience</a></li>
+        <li class="rv g"><a href="#projects"><em>06</em> Project Highlights</a></li>
+        <li class="rv g"><a href="#leadership"><em>07</em> Leadership</a></li>
+        <li class="rv g"><a href="#achievements"><em>08</em> Achievements</a></li>
+        <li class="rv g"><a href="#connect"><em>09</em> Let's Connect</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="page" id="about" data-title="About Me">
+  <div class="decor" aria-hidden="true"><i class="pearl-line" style="top:12px"></i><img class="tw" style="--w:40px;left:3%;top:9%" src="img/s1-twinkle.webp" alt=""><img class="tw" style="--w:30px;--d:1s;left:48%;bottom:12%" src="img/s3-twinkle-2.webp" alt=""></div>
+  <div class="grid2 sec" style="padding-top:clamp(30px,5vw,70px)">
+    <div class="about">
+      <div class="script t1 rv">Hallo!</div>
+      <h2 class="h2 rv" style="margin:6px 0 20px">I'm Adelia Rahman</h2>
+      <p class="rv">A Tourism Business Management student at Universitas Indonesia with a strong interest in event coordination, stakeholder management, and organizational leadership.</p>
+      <p class="rv">As Vice President of HIMTA UI 2025, I led 120 members across 10 departments. I've also gained experience in government administration at Bank Indonesia and in event operations across conferences, exhibitions, and campus-wide events.</p>
+      <p class="rv">I enjoy work that brings people together, from planning the details behind an event to building relationships with the people involved.</p>
+      <div class="stats" style="justify-content:flex-start;margin:28px 0 22px">
+        <div class="stk tape rv" style="--r:-3deg"><b>3.94</b><span>GPA</span><small>out of 4.00</small></div>
+        <div class="stk tape green rv" style="--r:2deg"><b>120+</b><span>Members led</span></div>
+        <div class="stk tape lav rv" style="--r:-2deg"><b>15+</b><span>Events &amp; projects</span></div>
+      </div>
+      <div class="contact-line rv"><span>adelrhmn28@gmail.com</span><span>·</span><span>+62 877 7999 2005</span><span>·</span><span>linkedin.com/in/adelrhmn</span></div>
+    </div>
+    <div class="oval rv">
+      <img class="fr" src="img/s3-oval-frame.webp" alt="">
+      <img class="ph bob" src="img/s3-foto-about-cutout.webp" alt="Adelia Rahman standing in a batik outer and black outfit">
+      <img class="bw bob" style="--d:.8s" src="img/s3-bow.webp" alt="" aria-hidden="true">
+    </div>
+  </div>
+</section>
+
+<!-- ================= EDUCATION ================= -->
+<section class="page" id="education" data-title="Education &amp; Certifications">
+  <div class="decor" aria-hidden="true"><i class="pearl-line" style="top:12px"></i><img class="tw" style="--w:36px;left:46%;top:10%" src="img/s4-twinkle.webp" alt=""><img class="tw" style="--w:28px;--d:1.4s;left:3%;bottom:8%" src="img/s4-twinkle-1.webp" alt=""></div>
+  <div class="phead"><div class="row"><div class="script t2 rv">Education</div><div class="script green t3 rv">&amp; Certifications</div></div></div>
+  <div class="edu">
+    <div>
+      <div class="ecard rv" style="--r:-1deg">
+        <img src="img/s4-logo-ui.webp" alt="Universitas Indonesia logo">
+        <div><h3>Universitas Indonesia</h3><p><b>Tourism Business Management</b> · Vocational Program</p><p class="yr">2023 – Present · GPA 3.94 / 4.00</p></div>
+      </div>
+      <div class="ecard g rv" style="--r:1deg">
+        <img class="smk" src="img/s4-logo-smk.webp" alt="SMK Pariwisata Telkom Bandung logo">
+        <div><h3>SMK Pariwisata Telkom Bandung</h3><p>Travel Business Management</p><p class="yr">2020 – 2023</p><span class="pill p8" style="margin-top:8px;font-size:13px;--r:-2deg">Most Outstanding Student</span></div>
+      </div>
+      <p class="lbl rv" style="margin-top:34px">Certifications</p>
+      <div class="pills left">
+        <span class="pill p5 rv" style="--r:-2deg">PPPW · ASITA West Java</span>
+        <span class="pill p6 rv" style="--r:1.5deg">Tour Guiding · HPI Bandung</span>
+        <span class="pill p7 rv" style="--r:-1deg">Tour Guiding · BNSP</span>
+      </div>
+    </div>
+    <div class="collage">
+      <div class="rv" style="left:0;top:0;width:50%"><img class="tilt" style="--w:100%;--r:-2deg;display:block" src="img/s4-polaroid-ui.webp" alt="Universitas Indonesia"></div>
+      <div class="rv" style="left:52%;top:5%;width:47%"><img class="tilt" style="--w:100%;--r:2.5deg;display:block" src="img/s4-polaroid-graduation.webp" alt="Graduation speech"></div>
+      <div class="rv" style="left:21%;top:57%;width:60%;z-index:2"><img class="tilt" style="--w:100%;--r:-1.5deg;display:block" src="img/s4-polaroid-smk.webp" alt="SMK Pariwisata Telkom Bandung"></div>
+      <img class="tw" style="--w:40px;right:2%;top:2%" src="img/s4-twinkle.webp" alt="" aria-hidden="true">
+      <img class="tw" style="--w:30px;--d:1s;left:2%;bottom:4%" src="img/s4-twinkle-1.webp" alt="" aria-hidden="true">
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section class="page" id="skills" data-title="Skills &amp; Tools">
+  <div class="slide">
+    <div class="sk-title rv"><span class="script sk-t1">Skills</span><span class="script green sk-t2">&amp; Tools</span></div>
+    <div class="sk-left rv">
+      <p class="lbl g">Tools</p>
+      <div class="tools sk-tools">
+        <figure><img src="img/s5-tool-word.webp" alt="Word" title="Word"><figcaption>Word</figcaption></figure>
+        <figure><img src="img/s5-tool-excel.webp" alt="Excel" title="Excel"><figcaption>Excel</figcaption></figure>
+        <figure><img src="img/s5-tool-ppt.webp" alt="PowerPoint" title="PowerPoint"><figcaption>PowerPoint</figcaption></figure>
+        <figure><img src="img/s5-tool-outlook.webp" alt="Outlook" title="Outlook"><figcaption>Outlook</figcaption></figure>
+        <figure><img src="img/s5-tool-onenote.webp" alt="OneNote" title="OneNote"><figcaption>OneNote</figcaption></figure>
+        <figure><img src="img/s5-tool-teams.webp" alt="Teams" title="Teams"><figcaption>Teams</figcaption></figure>
+        <figure><img src="img/s5-tool-docs.webp" alt="Google Docs" title="Google Docs"><figcaption>Google Docs</figcaption></figure>
+        <figure><img src="img/s5-tool-sheets.webp" alt="Google Sheets" title="Google Sheets"><figcaption>Google Sheets</figcaption></figure>
+        <figure><img src="img/s5-tool-gforms.webp" alt="Google Forms" title="Google Forms"><figcaption>Google Forms</figcaption></figure>
+        <figure><img src="img/s5-tool-gcal.webp" alt="Google Calendar" title="Google Calendar"><figcaption>Google Calendar</figcaption></figure>
+        <figure><img src="img/s5-tool-gmeet.webp" alt="Google Meet" title="Google Meet"><figcaption>Google Meet</figcaption></figure>
+        <figure><img src="img/s5-tool-zoom.webp" alt="Zoom" title="Zoom"><figcaption>Zoom</figcaption></figure>
+        <figure><img src="img/s5-tool-notion.webp" alt="Notion" title="Notion"><figcaption>Notion</figcaption></figure>
+        <figure><img src="img/s5-tool-canva.webp" alt="Canva" title="Canva"><figcaption>Canva</figcaption></figure>
+        <figure><img src="img/s5-tool-capcut.webp" alt="CapCut" title="CapCut"><figcaption>CapCut</figcaption></figure>
+        <figure><img src="img/s5-tool-figma.webp" alt="Figma" title="Figma"><figcaption>Figma</figcaption></figure>
+        <figure><img src="img/s5-tool-instagram.webp" alt="Instagram" title="Instagram"><figcaption>Instagram</figcaption></figure>
+        <figure><img src="img/s5-tool-tiktok.webp" alt="TikTok" title="TikTok"><figcaption>TikTok</figcaption></figure>
+      </div>
+      <p class="lbl g sk-lbl2">Languages</p>
+      <p class="sk-lang l1"><b>Indonesian</b> Native</p>
+      <p class="sk-lang l2"><b>English</b> Upper-Intermediate</p>
+    </div>
+    <div class="cardzone">
+      <img class="env" src="img/s5-envelope.webp" alt="">
+        <span class="pill p1 sk" style="--x:69.5%;--y:19.2%;--mx:37.6%;--my:19%;--r:-5deg">Public Speaking</span>
+        <span class="pill p2 sk" style="--x:82.8%;--y:25.5%;--mx:65%;--my:26%;--r:-4deg">Event Planning</span>
+        <span class="pill p5 sk" style="--x:62.4%;--y:35%;--mx:23%;--my:35%;--r:2deg">Stakeholder Management</span>
+        <span class="pill p4 sk" style="--x:85%;--y:37.5%;--mx:70%;--my:38%;--r:3deg">Tour Planning</span>
+        <span class="pill p1 sk" style="--x:61.7%;--y:50.6%;--mx:21%;--my:50.6%;--r:-5deg">Guest Handling</span>
+        <span class="pill p6 sk" style="--x:83.8%;--y:55.4%;--mx:67%;--my:55%;--r:5deg">Vendor &amp; Venue Coordination</span>
+        <span class="pill p4 sk" style="--x:65.1%;--y:64.9%;--mx:28%;--my:66%;--r:-6deg">Organizational Leadership</span>
+        <span class="pill p3 sk" style="--x:85.9%;--y:63.7%;--mx:72%;--my:64%;--r:-5deg">Tour Guiding</span>
+        <span class="pill p1 sk" style="--x:73.7%;--y:79.9%;--mx:46%;--my:80%;--r:5deg">Event Operations</span>
+      <span class="burst" aria-hidden="true"><b>Guest<br>Handling</b></span>
+      <img class="dc bowd" src="img/s5-bow.webp" alt="" aria-hidden="true">
+      <img class="dc flow" src="img/s5-button.webp" alt="" aria-hidden="true">
+      <img class="dc heart" src="img/s5-button-1.webp" alt="" aria-hidden="true">
+      <img class="tw dc" style="--w:34px;--x:31.4%;--y:6.8%;--mx:10%;--my:8%" src="img/s5-twinkle.webp" alt="" aria-hidden="true">
+      <img class="tw dc" style="--w:26px;--d:1.1s;--x:48%;--y:18.5%;--mx:92%;--my:46%" src="img/s5-twinkle-1.webp" alt="" aria-hidden="true">
+    </div>
+  </div>
+</section>
+
+<!-- ================= JOURNEY ================= -->
+<section class="page" id="journey" data-title="My Journey">
+  <div class="decor" aria-hidden="true"><i class="pearl-line" style="top:12px"></i><img class="tw" style="--w:34px;left:55%;top:6%" src="img/s1-twinkle-1.webp" alt=""><img class="tw" style="--w:30px;--d:1.2s;right:3%;bottom:14%" src="img/s1-spark.webp" alt=""></div>
+  <div class="phead">
+    <div class="script t2 rv">My Journey</div>
+    <p class="lead rv">Five years of learning by doing, from tour guiding in high school to leading events and organizations at Universitas Indonesia.</p>
+  </div>
+  <div class="cards">
+    <div class="jc rv"><div class="sway"><article class="jcard pk" style="--r:-1deg"><i class="cp"></i><h3>2021</h3><ul class="jl"><li><b>Tour Leader</b><span>Bandung City Tour</span></li><li><b>Tour Guide</b><span>Purwakarta Tour</span></li></ul></article></div></div>
+    <div class="jc rv"><div class="sway"><article class="jcard gr" style="--r:1deg"><i class="cp"></i><h3>2022</h3><ul class="jl"><li><b>Tour Leader &amp; Head of Event</b><span>Dudika Yogyakarta</span></li><li><b>Admin Intern</b><span>PT Era Gemilang</span></li><li><b>MarComm Intern</b><span>Absolute EO</span></li></ul><img class="lg" src="img/j-2022.webp" alt=""></article></div></div>
+    <div class="jc rv"><div class="sway"><article class="jcard pk" style="--r:-1deg"><i class="cp"></i><h3>2023</h3><ul class="jl"><li><b>Project Officer</b><span>Sparkle Craft</span></li><li><b>Event Staff</b><span>Bina Desa 12</span></li><li><b>Logistic Crew</b><span>Coats Conference</span></li></ul><img class="lg" src="img/j-2023.webp" alt=""></article></div></div>
+    <div class="jc rv"><div class="sway"><article class="jcard gr" style="--r:1deg"><i class="cp"></i><h3>2024</h3><ul class="jl"><li><b>Event Coordinator</b><span>Bina Desa 13</span></li><li><b>Head of PR</b><span>Olimpiade Vokasi</span></li><li><b>Deputy Head, Arts &amp; Culture</b><span>HIMTA UI</span></li><li><b>General Secretary</b><span>HMPI DPW II</span></li></ul><img class="lg" src="img/j-2024.webp" alt=""></article></div></div>
+    <div class="jc rv"><div class="sway"><article class="jcard pk" style="--r:-1deg"><i class="cp"></i><h3>2025</h3><ul class="jl"><li><b>Vice President</b><span>HIMTA UI</span></li><li><b>Administrative Intern</b><span>Bank Indonesia</span></li><li><b>Event &amp; Operations</b><span>UI Eco Run</span></li></ul><img class="lg" src="img/j-2025.webp" alt=""></article></div></div>
+    <div class="jc rv"><div class="sway"><article class="jcard gr" style="--r:1deg"><i class="cp"></i><h3>2026</h3><ul class="jl"><li><b>Vice Project Officer</b><span>Rona Nusantara</span></li><li><b>Asst. Head, Edustage</b><span>Royal Canin IIPE</span></li><li><b>Event Crew</b><span>PT Perminas</span></li></ul><img class="lg" src="img/j-2026.webp" alt=""></article></div></div>
+  </div>
+  <div class="glance rv">
+    <span class="lb">AT A GLANCE</span>
+    <div><b>5</b>years</div><div><b>15+</b>events &amp; projects</div><div><b>3</b>student organizations</div><div><b>1</b>central bank internship</div>
+  </div>
+</section>
+
+<!-- ================= WORK ================= -->
+<section class="page" id="work" data-title="Work Experience">
+  <div class="decor" aria-hidden="true"><i class="pearl-line" style="top:12px"></i><img class="tw" style="--w:38px;left:50%;top:3%" src="img/s1-twinkle.webp" alt=""><img class="tw" style="--w:30px;--d:.6s;right:4%;top:40%" src="img/s1-twinkle-2.webp" alt=""></div>
+  <div class="divider">
+    <div>
+      <div class="script t1 rv">Work</div><br>
+      <div class="script rainbow t2 rv" style="margin-top:-.15em">Experience</div>
+      <p class="gtags rv">Exhibitions · Conferences · Corporate Events · Internship</p>
+      <p class="lead rv">Hands-on roles across event operations, guest experience, and administration, from a national central bank to international expos.</p>
+    </div>
+    <div class="scrap photos">
+      <div class="rv"><img class="tilt" style="--w:230px" src="img/s7-polaroid-coats.webp" alt="Coats Global Leadership Conference"></div>
+      <div class="rv"><img class="tilt" style="--w:210px;--r:2deg" src="img/s7-polaroid-bi.webp" alt="Bank Indonesia"></div>
+      <div class="rv"><img class="tilt" style="--w:180px;--r:-2deg" src="img/s7-polaroid-eco-run.webp" alt="UI Eco Run"></div>
+      <div class="rv"><img class="tilt" style="--w:180px;--r:3deg" src="img/s7-polaroid-royal-canin.webp" alt="Royal Canin"></div>
+      <div class="rv"><img class="tilt" style="--w:190px;--r:-2deg" src="img/s7-id-card.webp" alt="Event coordinator ID card"></div>
+    </div>
+  </div>
+
+  <!-- Royal Canin -->
+  <div class="sec" id="royal">
+    <div class="kicker rv">Work Experience</div>
+    <h2 class="h2 rv">Royal Canin · IIPE</h2>
+    <p class="lead rv" style="margin-top:6px">Indonesia International Pet Expo · Tangerang</p>
+    <div class="cs">
+      <div class="paper tape rv" style="--r:.6deg">
+        <div class="entry">
+          <h3>Assistant Head, Edustage</h3><p class="meta">Sep 2026</p>
+          <ul class="dots"><li>Coordinated operational requirements and engagement for 14 participating communities</li><li>Orchestrated five talk shows, ensuring stage readiness for every session</li><li>Supported daily booth and stage operations across the three-day exhibition</li></ul>
+        </div>
+        <div class="entry">
+          <h3>Manpower, Promotion Booth</h3><p class="meta">Oct 2025</p>
+          <ul class="dots"><li>Ran a spinwheel promotion at an expo drawing 2,500+ visitors a day (up to ~3,500), with around 250 vouchers redeemed in total over the three days (min. purchase IDR 1,000,000)</li><li>Tracked prize inventory in real time, closing with zero stock discrepancies</li><li>Kept crowd flow steady while delivering fast-paced frontline service</li></ul>
+        </div>
+      </div>
+      <div>
+        <div class="stats" style="margin-top:0">
+          <div class="stk tape rv" style="--r:-3deg"><b>14</b><span>communities</span></div>
+          <div class="stk tape green rv" style="--r:2deg"><b>5</b><span>talk shows</span></div>
+          <div class="stk tape lav rv" style="--r:-2deg"><b>2,500+</b><span>visitors / day</span></div>
+        </div>
+        <div class="scrap">
+          <div class="rv"><img class="tilt" style="--w:150px" src="img/s8-polaroid-stage.webp" alt="Stage"></div>
+          <div class="rv"><img class="tilt" style="--w:150px;--r:2deg" src="img/s8-polaroid-team.webp" alt="Team"></div>
+          <div class="rv"><img class="tilt" style="--w:150px;--r:-2deg" src="img/s8-polaroid-talk-show.webp" alt="Talk show"></div>
+          <div class="rv"><img class="tilt" style="--w:230px;--r:2deg" src="img/s8-polaroid-instax.webp" alt="Booth memories"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PT Perminas + UI Eco Run -->
+  <div class="sec" id="events">
+    <div class="kicker g rv">Work Experience</div>
+    <h2 class="h2 g rv">Event Operations</h2>
+    <p class="lead rv" style="margin-top:6px">A corporate field trip and a campus race.</p>
+    <div class="cs" style="grid-template-columns:1fr 1fr">
+      <style>@media(max-width:900px){#events .cs{grid-template-columns:1fr!important}}</style>
+      <div class="skillnote green rv tape gtape" style="--r:-1deg">
+        <p class="lbl g">PT Perminas</p><div class="entry" style="margin:0;padding:0;border:0"><h3 style="font-size:20px;color:var(--leaf)">Event Crew</h3><p class="meta">Jun 2026 · Bandung</p></div>
+        <ul><li>Provided on-site standby and admin support</li><li>Directed participants on the Geology Museum tour</li><li>Kept participant flow smooth across sessions</li></ul>
+        <div class="scrap" style="margin-top:18px"><img class="tilt" style="--w:190px;--r:-2deg" src="img/s9-polaroid-museum-geologi.webp" alt="Museum Geologi"><img class="tilt" style="--w:150px;--r:3deg;margin-left:-20px" src="img/s9-polaroid-museum-tour.webp" alt="Museum tour"></div>
+      </div>
+      <div class="skillnote rv tape" style="--r:1deg">
+        <p class="lbl">UI Eco Run</p><div class="entry" style="margin:0;padding:0;border:0"><h3 style="font-size:20px">Event &amp; Operations Team</h3><p class="meta">Nov 2025 – Apr 2026 · Depok</p></div>
+        <ul><li>Managed operational coordination for F&amp;B tenants</li><li>Handled tenant electricity and on-site facilities</li><li>Aligned tenant needs with ops on race day</li></ul>
+        <div class="scrap" style="margin-top:18px"><img class="tilt" style="--w:200px;--r:2deg" src="img/s9-polaroid-eco-run.webp" alt="UI Eco Run"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bank Indonesia -->
+  <div class="sec" id="bi">
+    <div class="kicker rv">Work Experience · Internship</div>
+    <div class="logo-t rv"><h2 class="h2">Bank Indonesia</h2><img src="img/s6-bi-logo.webp" alt="Bank Indonesia logo" style="width:min(270px,70%)"></div>
+    <p class="lead rv" style="margin-top:6px">Administrative Intern · Facility and Archive Services Division · Jul – Sep 2025</p>
+    <div class="cs">
+      <div class="paper tape rv" style="--r:-.5deg">
+        <p class="lbl">Objective</p><p style="margin:0 0 18px">Keep accommodation, partner, and travel administration accurate and audit-ready for the division.</p>
+        <p class="lbl">Role</p><p style="margin:0 0 18px">Coordinated 30+ partner hotels and regional BI offices, compiled monthly reports, processed daily payment documents, and digitized 1989–1993 archives per ANRI standards.</p>
+        <p class="lbl g">Result</p><p style="margin:0">Built an Airline FAQ (Qatar Airways &amp; Garuda Indonesia) on refunds, rescheduling, baggage, and no-shows, adopted as the unit's internal travel guide.</p>
+      </div>
+      <div>
+        <div class="stats" style="margin-top:0">
+          <div class="stk tape rv" style="--r:-3deg"><b>30+</b><span>partner hotels</span></div>
+          <div class="stk tape green rv" style="--r:2deg"><b>1</b><span>internal travel guide</span></div>
+          <div class="stk tape lav rv" style="--r:-2deg"><b>1989–1993</b><span>archives digitized</span></div>
+        </div>
+        <div class="scrap">
+          <div class="rv"><img class="tilt" style="--w:190px;--r:-2deg" src="img/s10-polaroid-bi-building.webp" alt="Bank Indonesia building"></div>
+          <div class="rv"><img class="tilt" style="--w:250px;--r:2deg" src="img/s10-polaroid-bi-team.webp" alt="Bank Indonesia team"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Coats -->
+  <div class="sec" id="coats">
+    <div class="kicker g rv">Work Experience</div>
+    <h2 class="h2 g rv">Coats Global Leadership Conference</h2>
+    <p class="lead rv" style="margin-top:6px">An international leadership conference in Jakarta.</p>
+    <div class="cs">
+      <div class="paper kraft rv" style="--r:-.8deg">
+        <div class="entry" style="margin:0;padding:0;border:0"><h3 style="font-size:22px;color:#6b3a26">Logistic Crew &amp; Showman</h3><p class="meta" style="color:#6b3a26">Dec 2023 – Feb 2024 · Jakarta</p></div>
+        <ul class="dots"><li>Hosted segments for ~100 international guests</li><li>Managed venue logistics, equipment, and registration</li><li>Liaised with speakers, tech teams, and vendors</li></ul>
+      </div>
+      <div class="scrap">
+        <div class="rv"><img class="tilt" style="--w:230px" src="img/s9-polaroid-coats-gala.webp" alt="Coats gala"></div>
+        <div class="rv"><img class="tilt" style="--w:230px;--r:2deg" src="img/s9-polaroid-coats-venue.webp" alt="Coats venue"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Early experience -->
+  <div class="sec" id="early">
+    <div class="kicker g rv">Work Experience · 2022</div>
+    <div class="script t2 rv">Early Experience</div>
+    <div class="cs">
+      <div class="paper tape rv" style="--r:-.6deg">
+        <div class="entry">
+          <div class="top"><img src="img/s11-logo-absolute.webp" alt="Absolute EO logo"><div><h3>Absolute Event Organizer</h3><p class="role">Marketing Communication Intern</p></div></div>
+          <p class="meta">Sep 2022 – Jan 2023</p>
+          <ul class="dots"><li>Researched content ideas and planned social media content for the owner's content-creator and marketing activities</li><li>Oversaw administration and cost control for Kama Ruang Restaurant, selecting vendors and inspecting supply quality</li></ul>
+        </div>
+        <div class="entry">
+          <div class="top"><img src="img/s11-logo-evolt.webp" alt="Evolt logo"><div><h3>PT Era Gemilang Perkasa</h3><p class="role">Administrative Intern &amp; Event Crew</p></div></div>
+          <p class="meta">Jul – Sep 2022</p>
+          <ul class="dots"><li>Prepared administrative reports for management, assisted visitors, and tracked office-supply inventory</li><li>Rotated across floor, logistics, project, and runner crew roles on multiple event projects</li></ul>
+        </div>
+      </div>
+      <div>
+        <div class="scrap">
+          <div class="rv"><img class="tilt" style="--w:230px" src="img/s11-polaroid-absolute-eo.webp" alt="Absolute EO, 2022"></div>
+          <div class="rv"><img class="tilt" style="--w:280px;--r:2deg" src="img/s11-polaroid-evolt.webp" alt="Evolt, event crew"></div>
+        </div>
+        <div class="stk tape rv" style="--r:-2deg;max-width:260px;margin:24px auto 0"><b>2 internships</b><span>4 crew roles</span><small>floor · logistics · project · runner</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section class="page" id="projects" data-title="Project Highlights">
+  <div class="decor" aria-hidden="true"><img class="tw" style="--w:38px;left:6%;top:12%" src="img/s4-twinkle.webp" alt=""><img class="tw" style="--w:30px;--d:1.1s;right:6%;top:30%" src="img/s5-twinkle.webp" alt=""></div>
+  <div class="hangrow" style="margin-top:20px">
+    <a class="sway rv" href="#bina"><img class="tilt" style="--w:240px;--r:-2deg" src="img/s12-hanging-bina-desa-13.webp" alt="Bina Desa 13"></a>
+    <a class="sway rv" href="#rona"><img class="tilt" style="--w:240px;--r:2deg" src="img/s12-hanging-rona-nusantara.webp" alt="Rona Nusantara UI 2026"></a>
+    <a class="sway rv" href="#campus"><img class="tilt" style="--w:200px;--r:-1.5deg" src="img/s12-hanging-tourismfest-ui.webp" alt="TourismFest UI 2024"></a>
+    <a class="sway rv" href="#campus"><img class="tilt" style="--w:210px;--r:2deg" src="img/s12-hanging-sparkle-craft.webp" alt="Sparkle Craft"></a>
+  </div>
+  <div class="phead" style="text-align:center">
+    <div class="script t1 rv">Project Highlights</div>
+    <p class="lead rv" style="margin-left:auto;margin-right:auto">Campus events and community programs I planned, coordinated, and delivered, from a ~406-guest cultural showcase to an 8-day village program.</p>
+  </div>
+  <p class="lbl rv" style="text-align:center">All projects at a glance</p>
+  <div class="chips">
+    <a class="chip rv" style="--bg:var(--blush3);--r:-2deg" href="#campus"><b>Olimpiade Vokasi UI</b><span>Head of PR</span></a>
+    <a class="chip rv" style="--bg:var(--mint3);--r:1.5deg" href="#more"><b>Mabim Pariwisata UI 2026</b><span>Mentor</span></a>
+    <a class="chip rv" style="--bg:#fbe3a8;--r:-1deg" href="#more"><b>Mabim Pariwisata UI 2024</b><span>Mentor</span></a>
+    <a class="chip rv" style="--bg:var(--lav);--r:2deg" href="#more"><b>Vokartion</b><span>Exhibition Staff</span></a>
+    <a class="chip rv" style="--bg:var(--blush3);--r:-2deg" href="#more"><b>Bina Desa 12</b><span>Event Staff</span></a>
+    <a class="chip rv" style="--bg:var(--mint3);--r:1.5deg" href="#more"><b>Tourism Exhibition</b><span>Head of Exhibition</span></a>
+    <a class="chip rv" style="--bg:#fbe3a8;--r:-1deg" href="#more"><b>Purwakarta Tour</b><span>Tour Guide</span></a>
+    <a class="chip rv" style="--bg:var(--lav);--r:2deg" href="#more"><b>Industry Trip Yogyakarta</b><span>Tour Leader</span></a>
+    <a class="chip rv" style="--bg:var(--blush3);--r:-2deg" href="#more"><b>Bandung City Tour</b><span>Tour Leader</span></a>
+  </div>
+
+  <!-- Rona -->
+  <div class="sec" id="rona">
+    <div class="kicker rv">Project Highlight · Main Case Study</div>
+    <h2 class="h2 rv">Ronanusantara</h2>
+    <p class="lead rv" style="margin-top:6px">Vice Project Officer · 12 May 2026 · Auditorium Vokasi UI</p>
+    <div class="cs">
+      <div>
+        <div class="paper tape rv" style="--r:-.6deg">
+          <p class="lbl">What I led</p>
+          <ul class="dots">
+            <li>Co-led a 40-person committee from concept to show day for a Nusantara cultural event</li>
+            <li>Secured three expert speakers: Dave Tjoa (wastra designer), Aditia Gunawan (philologist), and Dian Satya (wastra collector)</li>
+            <li>Compiled a 170-slide production pack, guidelines, and task lists to align every division</li>
+            <li>Handled sponsor and media-partner documents, venue, equipment, and talent needs</li>
+          </ul>
+        </div>
+        <div class="programs">
+          <div class="prog a rv" style="--r:-2deg"><b>Rona Wicara</b><span>Seminar</span></div>
+          <div class="prog b rv" style="--r:2deg"><b>Rona Cerita</b><span>Theater</span></div>
+          <div class="prog c rv" style="--r:1.5deg"><b>Rona Rupa</b><span>Mini exhibition</span></div>
+          <div class="prog d rv" style="--r:-1.5deg"><b>Rona Memoria</b><span>Photobooth</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="stats" style="margin-top:0;gap:22px 16px">
+          <div class="stk tape rv" style="--r:-3deg"><b>40</b><span>committee</span></div>
+          <div class="stk tape green rv" style="--r:2deg"><b>~406</b><span>participants</span></div>
+          <div class="stk tape lav rv" style="--r:-2deg"><b>3</b><span>expert speakers</span></div>
+          <div class="stk tape gold rv" style="--r:3deg"><b>170</b><span>slide prod. pack</span></div>
+        </div>
+        <div class="rv" style="margin-top:30px"><img class="tilt" style="--w:100%;--r:1.5deg;display:block" src="img/s13-polaroid-rona-group.webp" alt="Rona group"></div>
+      </div>
+    </div>
+    <div class="rgal">
+      <div class="rv"><img class="tilt" style="--k:24.7;--r:2deg;" src="img/s13-polaroid-speakers.webp" alt="Speakers and faculty"></div>
+      <div class="rv"><img class="tilt" style="--k:24.7;--r:-2deg;" src="img/s13-polaroid-main-stage.webp" alt="Main stage"></div>
+      <div class="rv"><img class="tilt" style="--k:24.7;--r:2deg;" src="img/s13-polaroid-aditia.webp" alt="Aditia Gunawan"></div>
+      <div class="rv"><img class="tilt" style="--k:24.7;--r:-3deg;" src="img/s13-polaroid-dave-tjoa.webp" alt="With Dave Tjoa"></div>
+      <div class="rv"><img class="tilt" style="--k:28.4;--r:2deg;" src="img/s13-print-photobooth-1.webp" alt="Photobooth print"></div>
+      <div class="rv"><img class="tilt" style="--k:28.4;--r:-2deg;" src="img/s13-print-photobooth-2.webp" alt="Photobooth print"></div>
+      <div class="rv"><img class="tilt" style="--k:28.4;--r:3deg;" src="img/s13-polaroid-decor.webp" alt="Venue decor"></div>
+      <div class="rv"><img class="tilt" style="--k:28.4;--r:-2deg;" src="img/s13-polaroid-core-team.webp" alt="Core team"></div>
+    </div>
+  </div>
+
+  <!-- Bina Desa -->
+  <div class="sec" id="bina">
+    <div class="kicker g rv">Project Highlight · Community Development</div>
+    <h2 class="h2 g rv">Bina Desa 13</h2>
+    <p class="lead rv" style="margin-top:6px">Event Coordinator · Mar – Nov 2024 · Kubang Baros, Banten</p>
+    <div class="cs">
+      <div class="paper tape rv" style="--r:.5deg">
+        <p class="lbl">My role</p>
+        <ul class="dots"><li>Coordinated 105 committee members across the Event, Partnership, and Medical divisions</li><li>Assessed village needs and drafted the initial rundowns that shaped the 8-day program</li><li>Delivered health, education, and MSME &amp; POKDARWIS tourism sessions for ~300 villagers</li></ul>
+      </div>
+      <div class="stats" style="margin-top:0">
+        <div class="stk tape rv" style="--r:-3deg"><b>105</b><span>committee members</span></div>
+        <div class="stk tape green rv" style="--r:2deg"><b>~300</b><span>beneficiaries</span></div>
+        <div class="stk tape lav rv" style="--r:-2deg"><b>8</b><span>program days</span></div>
+      </div>
+    </div>
+    <div class="rgal">
+      <div class="rv"><img class="tilt" style="--k:27;--r:0deg" src="img/s14-polaroid-peak-event.webp" alt="Peak event"></div>
+      <div class="rv"><img class="tilt" style="--k:27;--r:2deg" src="img/s14-polaroid-event-division.webp" alt="Event division"></div>
+      <div class="rv"><img class="tilt" style="--k:27;--r:-2deg" src="img/s14-polaroid-dental-workshop.webp" alt="Dental workshop"></div>
+      <div class="rv"><img class="tilt" style="--k:31;--r:2deg" src="img/s14-polaroid-medical-training.webp" alt="Medical training"></div>
+      <div class="rv"><img class="tilt" style="--k:31;--r:-2deg" src="img/s14-polaroid-pokdarwis-session.webp" alt="Pokdarwis session"></div>
+      <div class="rv"><img class="tilt" style="--k:31;--r:2deg" src="img/s14-polaroid-inauguration.webp" alt="Inauguration"></div>
+    </div>
+  </div>
+
+  <!-- Campus events -->
+  <div class="sec" id="campus">
+    <div class="kicker rv">Project Highlights</div>
+    <h2 class="h2 rv">Campus Events</h2>
+    <p class="lead rv" style="margin-top:6px">A festival, a sports competition, and a hands-on workshop.</p>
+    <div class="cs" style="grid-template-columns:1fr 1fr 1fr">
+      <style>#campus .rgal{justify-content:space-evenly;gap:26px 10px}@media(max-width:1000px){#campus .cs{grid-template-columns:1fr!important}}#campus .cs{align-items:stretch}#campus .cs>div>div{height:100%}</style>
+      <div>
+        <div class="paper kraft rv" style="--r:-.8deg">
+          <p class="lbl" style="color:#6b3a26">TourismFest UI 2024</p>
+          <div class="entry" style="margin:0;padding:0;border:0"><h3 style="font-size:20px;color:#6b3a26">Steering Committee</h3><p class="meta" style="color:#6b3a26">2024 · Concept: "Semarak Jawadwipa"</p></div>
+          <p style="margin:6px 0 0;font-size:15px">Oversaw preparation and on-the-day execution of the festival with the organizing committee.</p>
+        </div>
+      </div>
+      <div>
+        <div class="skillnote green tape gtape rv" style="--r:1deg">
+          <p class="lbl g">Olimpiade Vokasi UI</p>
+          <div class="entry" style="margin:0;padding:0;border:0"><h3 style="font-size:20px;color:var(--leaf)">Head of Public Relations</h3><p class="meta">Apr – Sep 2024</p></div>
+          <ul><li>Primary liaison for 15 study programs across 10+ sports</li><li>Directed social media and external relations</li></ul>
+          <div style="display:flex;gap:14px;margin-top:14px;flex-wrap:wrap"><div><b style="font-family:var(--serif);font-size:30px;color:var(--leaf)">15</b> <small>study programs</small></div><div><b style="font-family:var(--serif);font-size:30px;color:var(--leaf)">10+</b> <small>sports</small></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="paper tape rv" style="--r:.6deg">
+          <p class="lbl">Sparkle Craft</p>
+          <div class="entry" style="margin:0;padding:0;border:0"><h3 style="font-size:20px">Project Officer</h3><p class="meta">Nov – Dec 2023</p></div>
+          <p style="margin:6px 0 14px;font-size:15px">Led a 30-person committee to plan and deliver a craft workshop within an IDR 4 million budget.</p>
+          <div style="display:flex;gap:16px;flex-wrap:wrap"><div><b style="font-family:var(--serif);font-size:28px;color:var(--pink4)">30</b> <small>committee</small></div><div><b style="font-family:var(--serif);font-size:28px;color:var(--pink4)">~40</b> <small>participants</small></div><div><b style="font-family:var(--serif);font-size:28px;color:var(--pink4)">4M</b> <small>IDR budget</small></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="rgal">
+      <div class="rv"><img class="tilt" style="--k:38;--r:2deg" src="img/s15-polaroid-tf-ambience.webp" alt="TourismFest ambience"></div>
+      <div class="rv"><img class="tilt" style="--k:38;--r:-2deg" src="img/s15-polaroid-tf-steering-team.webp" alt="Steering team"></div>
+      <div class="rv"><img class="tilt" style="--k:38;--r:2deg" src="img/s15-polaroid-tf-guest-star.webp" alt="Guest star"></div>
+      <div class="rv"><img class="tilt" style="--k:38;--r:-2deg" src="img/s15-polaroid-olimvok-pr.webp" alt="Olimpiade Vokasi PR"></div>
+      <div class="rv"><img class="tilt" style="--k:38;--r:2deg" src="img/s15-polaroid-sparkle-workshop.webp" alt="The workshop"></div>
+      <div class="rv"><img class="tilt" style="--k:38;--r:-2deg" src="img/s15-polaroid-sparkle-certificate.webp" alt="Sparkle certificate"></div>
+    </div>
+  </div>
+
+  <!-- More projects -->
+  <div class="sec" id="more">
+    <div class="kicker g rv">Project Highlights</div>
+    <h2 class="h2 g rv">More Projects</h2>
+    <p class="lead rv" style="margin-top:6px">Mentoring, exhibitions, and tour leading, from high school to campus.</p>
+    <div class="tickets" style="margin-top:34px">
+      <div class="tk rv"><div class="ticket" style="--r:-2deg"><div style="--bg:var(--blush3)"><b>Mentor · 11 mentees</b><span>Mabim Pariwisata UI</span><small>2026</small></div></div><img class="tilt" style="--w:220px;--r:2deg" src="img/s16-polaroid-mabim-pariwisata-ui-2026.webp" alt="Mabim Pariwisata UI 2026"></div>
+      <div class="tk rv"><div class="ticket" style="--r:2deg"><div style="--bg:var(--mint3);--tc:var(--leaf)"><b>Mentor · 13 mentees</b><span>Mabim Pariwisata UI</span><small>2024</small></div></div><img class="tilt" style="--w:220px;--r:-2deg" src="img/s16-polaroid-mabim-pariwisata-ui-2024.webp" alt="Mabim Pariwisata UI 2024"></div>
+      <div class="tk rv"><div class="ticket" style="--r:-1.5deg"><div style="--bg:#fbe3a8;--tc:#8a4a12"><b>Exhibition Staff</b><span>Vokartion, Universitas Indonesia</span><small>Dec 2023</small></div></div><img class="tilt" style="--w:220px;--r:2deg" src="img/s16-polaroid-vokartion-universitas-indonesia-dec-2023.webp" alt="Vokartion"></div>
+      <div class="tk rv"><div class="ticket" style="--r:2deg"><div style="--bg:var(--lav);--tc:#5b3b94"><b>Event Staff</b><span>Bina Desa 12, Universitas Indonesia</span><small>Sep – Oct 2023</small></div></div><img class="tilt" style="--w:220px;--r:-2deg" src="img/s16-polaroid-bina-desa-12-universitas-indonesia-sep-oct-2023.webp" alt="Bina Desa 12"></div>
+      <div class="tk rv"><div class="sticky-note tape" style="--r:-2deg"><b>Tourism Exhibition</b><small><strong>Head of Exhibition</strong><br>SMK Telkom · Jun 2022</small></div></div>
+      <div class="tk rv"><div class="ticket" style="--r:1.5deg"><div style="--bg:var(--mint3);--tc:var(--leaf)"><b>Tour Guide</b><span>Purwakarta Tour</span><small>Mar 2022</small></div></div><img class="tilt" style="--w:220px;--r:2deg" src="img/s16-polaroid-purwakarta-tour-mar-2022.webp" alt="Purwakarta Tour"></div>
+      <div class="tk rv"><div class="ticket" style="--r:-2deg"><div style="--bg:var(--blush3)"><b>Tour Leader &amp; Head of Event</b><span>Industry Trip (Dudika), Yogyakarta</span><small>Jan – Mar 2022</small></div></div><img class="tilt" style="--w:220px;--r:-2deg" src="img/s16-polaroid-industry-trip-dudika-yogyakarta-jan-mar-2022.webp" alt="Industry Trip Yogyakarta"></div>
+      <div class="tk rv"><div class="ticket" style="--r:2deg"><div style="--bg:var(--lav);--tc:#5b3b94"><b>Tour Leader</b><span>Bandung City Tour</span><small>Nov 2021</small></div></div><img class="tilt" style="--w:220px;--r:2deg" src="img/s16-polaroid-bandung-city-tour-nov-2021.webp" alt="Bandung City Tour"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LEADERSHIP ================= -->
+<section class="page" id="leadership" data-title="Leadership">
+  <div class="decor" aria-hidden="true"><i class="pearl-line" style="top:12px"></i><img class="tw" style="--w:36px;right:6%;top:6%" src="img/s1-twinkle.webp" alt=""><img class="tw" style="--w:28px;--d:.9s;left:48%;top:45%" src="img/s4-twinkle-1.webp" alt=""></div>
+  <!-- 1 -->
+  <div class="sec" id="lead1" style="padding-top:clamp(30px,5vw,60px)">
+    <div class="lead-grid">
+      <div>
+        <div class="logo-t rv"><span class="lt"><img src="img/s17-logo-tile.webp" alt=""><img class="lg" src="img/s17-logo.webp" alt="HIMTA UI logo"></span><div><p class="kicker" style="margin:0">Leadership · 1 of 3</p><div class="script t2" style="padding-top:.1em">Wakil Ketua Himpunan</div></div></div>
+        <h2 class="h2 rv" style="margin:6px 0 4px">Vice President</h2><p class="lead rv" style="margin:0 0 20px">HIMTA UI 2025 · Jan – Dec 2025</p>
+        <div class="paper tape rv" style="--r:-.5deg"><p class="lbl">The role &amp; impact</p><p style="margin:0">As the Vice President of HIMTA UI 2025, I co-led a 120-member association spanning 10 departments and around 60 work programs alongside the President. I supervised the Internal Affairs and Communication &amp; Information divisions, monitored progress and resolved operational issues, and established two new departments to strengthen the organization.</p></div>
+        <div class="stats" style="justify-content:flex-start">
+          <div class="stk tape rv" style="--r:-3deg"><b>120</b><span>members</span></div>
+          <div class="stk tape green rv" style="--r:2deg"><b>10</b><span>departments</span></div>
+          <div class="stk tape lav rv" style="--r:-2deg"><b>~60</b><span>programs</span></div>
+          <div class="stk tape gold rv" style="--r:3deg"><b>2</b><span>new depts.</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="skillnote tape rv" style="--r:1.5deg"><p class="lbl">Skill applied</p><ul><li>Organizational Leadership &amp; Team Management</li><li>Program Monitoring &amp; Evaluation</li><li>Cross-Department Coordination</li><li>Problem Solving &amp; Decision Making</li><li>Organizational Development</li></ul></div>
+        <div class="lp1">
+          <div class="rv"><img class="tilt" style="--w:100%;--r:-1.5deg;display:block" src="img/s17-photo-himta-functionaries.webp" alt="HIMTA functionaries"></div>
+          <div class="lp1row">
+            <div class="rv"><img class="tilt" style="--w:100%;--r:2deg;display:block" src="img/s17-photo-wakahim-poster.webp" alt="Wakahim poster"></div>
+            <figure class="pframe rv" style="--w:100%;--r:-1.5deg;--ar:3/2;margin:0"><img src="img/s17-photo-img-3109.jpg" alt="HIMTA UI 2025 event"></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 2 -->
+  <div class="sec" id="lead2">
+    <div class="lead-grid">
+      <div>
+        <div class="logo-t rv"><span class="lt"><img src="img/s18-logo-tile.webp" alt=""><img class="lg" src="img/s18-logo.webp" alt="HMPI DPW II logo"></span><div><p class="kicker g" style="margin:0">Leadership · 2 of 3</p><div class="script green t2" style="padding-top:.1em">General Secretary</div></div></div>
+        <h2 class="h2 g rv" style="margin:6px 0 4px">HMPI DPW II</h2><p class="lead rv" style="margin:0 0 20px">General Secretary · Jan 2024 – Jan 2025</p>
+        <div class="paper tape gtape rv" style="--r:.5deg"><p class="lbl g">The role &amp; impact</p><p style="margin:0">As General Secretary 2 of Himpunan Mahasiswa Pariwisata Indonesia (HMPI) DPW II, I managed nearly all of the organization's documents and data for the 2024 board, drafting meeting minutes, proposals, timelines, and content planners for every program. Working in tandem with General Secretary 1, I documented key decisions and action items to keep programs on schedule.</p></div>
+      </div>
+      <div>
+        <div class="skillnote green tape gtape rv" style="--r:-1.5deg"><p class="lbl g">Skill applied</p><ul><li>Documentation &amp; Minute Taking</li><li>Proposal &amp; Timeline Drafting</li><li>Content Planning</li><li>Data &amp; Archive Management</li><li>Stakeholder Communication</li></ul></div>
+        <div class="scrap" style="margin-top:26px">
+          <div class="rv"><img class="tilt" style="--w:210px;--r:2deg" src="img/s18-photo-sekretaris-poster.webp" alt="Sekretaris 2 poster"></div>
+          <div class="rv"><img class="tilt" style="--w:190px;--r:-2deg" src="img/s18-photo-hmpi-board.webp" alt="HMPI board"></div>
+          <figure class="pframe gtape rv" style="--w:250px;--r:1.5deg;--ar:4/3;margin:14px 0 0"><img src="img/s18-photo-img-1211.jpg" alt="HMPI DPW II Muswil X"></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 3 -->
+  <div class="sec" id="lead3">
+    <div class="logo-t rv"><span class="lt"><img src="img/s17-logo-tile.webp" alt=""><img class="lg" src="img/s17-logo.webp" alt="HIMTA UI logo"></span><div><p class="kicker" style="margin:0">Leadership · 3 of 3</p><div class="script t2" style="padding-top:.1em">Senbud</div></div></div>
+    <h2 class="h2 rv" style="margin:6px 0 4px">Deputy Head, Arts &amp; Culture</h2><p class="lead rv" style="margin:0 0 20px">HIMTA UI 2024 · Jan – Dec 2024</p>
+    <div class="lead-grid">
+      <div>
+        <div class="paper tape rv" style="--r:-.5deg"><p class="lbl">The role &amp; impact</p><p style="margin:0">As the Deputy Head, Arts &amp; Culture of HIMTA UI 2024, I budgeted, scheduled, and evaluated 5 cultural and arts work programs with an 8-person team. I also served on the Steering Committee for TourismFest UI 2024, overseeing preparation and event execution.</p></div>
+        <div class="stats" style="justify-content:flex-start">
+          <div class="stk tape rv" style="--r:-3deg"><b>5</b><span>work programs</span></div>
+          <div class="stk tape green rv" style="--r:2deg"><b>8</b><span>team members</span></div>
+          <div class="stk tape lav rv" style="--r:-2deg"><b>1</b><span>festival SC</span></div>
+        </div>
+      </div>
+      <div class="skillnote tape rv" style="--r:1.5deg"><p class="lbl">Skill applied</p><ul><li>Program Planning &amp; Budgeting</li><li>Event Scheduling &amp; Evaluation</li><li>Team Coordination</li><li>Arts &amp; Culture Programming</li><li>Steering Committee Oversight</li></ul></div>
+    </div>
+    <p class="lbl rv" style="margin-top:38px;text-align:center">The 5 work programs</p>
+    <div class="five">
+      <figure class="pframe cap rv" style="--w:100%;--r:-2deg;--ar:3/4"><img src="img/s19-photo-img-3838.jpg" alt="Batik Day"><figcaption>Batik Day<small>Every Tuesday</small></figcaption></figure>
+      <figure class="pframe cap gtape rv" style="--w:100%;--r:2deg;--ar:3/4"><img src="img/s19-photo-img-2116.jpg" alt="Art Visit"><figcaption>Art Visit<small>4 visits</small></figcaption></figure>
+      <div class="sticky-note tape rv" style="--r:-1.5deg;align-self:center"><b>Kontingen Varco</b><small>Arts &amp; Culture work program</small></div>
+      <figure class="pframe cap gtape rv" style="--w:100%;--r:2.5deg;--ar:3/4"><img src="img/s19-photo-img-7587.jpg" alt="Workshop Seni Budaya"><figcaption>Workshop Seni Budaya</figcaption></figure>
+      <figure class="pframe cap rv" style="--w:100%;--r:-2deg;--ar:3/4"><img src="img/s19-photo-5b1c4a20.jpg" alt="TourismFest"><figcaption>TourismFest</figcaption></figure>
+    </div>
+    <p class="lbl g rv" style="margin-top:44px;text-align:center">Arts &amp; Culture team 2024</p>
+    <div class="scrap" style="margin-top:20px">
+      <figure class="pframe cap gtape rv" style="--w:min(380px,46%);--r:-1.5deg;--ar:3/4"><img src="img/s19-photo-img-4118.jpg" alt="Arts and Culture team, HIMTA UI 2024"><figcaption>Seni Budaya 2024</figcaption></figure>
+      <figure class="pframe cap rv" style="--w:min(380px,46%);--r:1.5deg;--ar:3/4"><img src="img/s19-photo-img-7536.jpg" alt="Arts and Culture team, HIMTA UI 2024"><figcaption>Seni Budaya 2024</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ACHIEVEMENTS ================= -->
+<section class="page" id="achievements" data-title="Achievements">
+  <div class="decor" aria-hidden="true"><i class="pearl-line" style="top:12px"></i><img class="tw" style="--w:40px;left:8%;top:10%" src="img/s1-twinkle.webp" alt=""><img class="tw" style="--w:30px;--d:1s;right:10%;bottom:12%" src="img/s5-twinkle-1.webp" alt=""></div>
+  <div class="phead" style="text-align:center">
+    <div class="script t1 rv">Achievements</div>
+    <p class="lead rv" style="margin-left:auto;margin-right:auto">Awards and recognition.</p>
+  </div>
+  <div class="ach">
+    <div class="paper tape rv" style="--r:-.4deg">
+      <div class="award"><img src="img/s20-award-icon.webp" alt=""><div><h3>1st Place, Business Plan Competition</h3><p>"Berani Bisnis Sedari Muda" · Telkom Schools Indonesia</p></div></div>
+      <div class="award"><img src="img/s20-award-icon-1.webp" alt=""><div><h3>2nd Place, Tourism Writing Competition</h3><p>STIEPAR Yapari</p></div></div>
+      <div class="award"><img src="img/s20-award-icon-2.webp" alt=""><div><h3>Most Outstanding Student</h3><p>Telkom Tourism Vocational High School</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONNECT ================= -->
+<section class="page" id="connect" data-title="Let's Connect">
+  <div class="decor" aria-hidden="true"><i class="pearl-line" style="top:12px"></i><img class="tw" style="--w:40px;right:42%;top:10%" src="img/s1-twinkle.webp" alt=""><img class="tw" style="--w:30px;--d:1.3s;left:4%;bottom:10%" src="img/s3-twinkle-2.webp" alt=""></div>
+  <div class="cn sec" style="padding-top:clamp(30px,5vw,60px)">
+    <div>
+      <div class="script t1 rv">Let's Connect</div>
+      <p class="lead rv">Open to event operations and event management opportunities. Let's create meaningful experiences together.</p>
+      <div style="margin-top:24px">
+        <div class="crow rv"><img src="img/s21-contact-icon.webp" alt=""><div class="v"><a href="mailto:adelrhmn28@gmail.com">adelrhmn28@gmail.com</a></div><button class="btn out" data-copy="adelrhmn28@gmail.com">Copy</button></div>
+        <div class="crow rv"><img src="img/s21-contact-icon-1.webp" alt=""><div class="v">+62 877 7999 2005</div><button class="btn out" data-copy="+62 877 7999 2005">Copy</button></div>
+        <div class="crow rv"><img src="img/s21-contact-icon-2.webp" alt=""><div class="v"><a href="https://www.linkedin.com/in/adelrhmn" target="_blank" rel="noopener">linkedin.com/in/adelrhmn</a></div><button class="btn out" data-copy="https://www.linkedin.com/in/adelrhmn">Copy</button></div>
+        <div class="crow rv"><img src="img/s21-contact-icon-3.webp" alt=""><div class="v">Depok, West Java, Indonesia</div></div>
+      </div>
+      <div class="script green t2 rv" style="margin-top:20px">Thank you!</div>
+    </div>
+    <div class="cn-art rv">
+      <img class="ph bob" src="img/s21-foto-kebaya-cutout.webp" alt="Adelia Rahman in a batik kebaya">
+    </div>
+  </div>
+</section>
+
+<p class="copyr">© 2026 Adelia Rahman · Event Operations &amp; Management</p>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script>
+(function(){
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hasGsap = !!window.gsap && !!window.ScrollTrigger;
+  var lenis = null;
+  if (hasGsap) gsap.registerPlugin(ScrollTrigger);
+  if (hasGsap && window.Lenis && !reduce) {
+    try {
+      lenis = new Lenis({lerp:0.085,smoothWheel:true,wheelMultiplier:0.95});
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add(function(t){ lenis.raf(t*1000); });
+      gsap.ticker.lagSmoothing(0);
+    } catch(e){ lenis = null; }
+  }
+  function scrollToY(y, immediate){
+    if (lenis) lenis.scrollTo(y,{immediate:!!immediate,duration:immediate?0:1.2});
+    else window.scrollTo({top:y,behavior:(immediate||reduce)?'auto':'smooth'});
+  }
+  function goTo(id, immediate){
+    var el = document.getElementById(id); if(!el) return false;
+    var y = id==='home' ? 0 : el.getBoundingClientRect().top + window.scrollY - 56;
+    scrollToY(Math.max(0,y), immediate); return true;
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href^="#"]'); if(!a) return;
+    var id = a.getAttribute('href').slice(1);
+    if (!document.getElementById(id)) return;
+    e.preventDefault(); goTo(id,false);
+    try{ history.replaceState(null,'','#'+id); }catch(_){}
+  });
+  window.addEventListener('hashchange', function(){ goTo((location.hash||'').slice(1),false); });
+
+  // scroll-spy for the nav
+  var secs = Array.prototype.slice.call(document.querySelectorAll('main > section.page'));
+  var navA = Array.prototype.slice.call(document.querySelectorAll('#links a'));
+  function setOn(id){
+    navA.forEach(function(a){ var on = a.getAttribute('href')==='#'+id; a.classList.toggle('on',on); if(on && a.scrollIntoView){ var box=document.getElementById('links'); var l=a.offsetLeft-box.clientWidth/2+a.clientWidth/2; box.scrollTo({left:l,behavior:'auto'}); } });
+  }
+  var spyTick=false, cur='';
+  function spy(){
+    spyTick=false; var y=window.innerHeight*0.35, id=secs[0].id;
+    secs.forEach(function(sec){ if(sec.getBoundingClientRect().top<=y) id=sec.id; });
+    if(id!==cur){ cur=id; setOn(id); }
+  }
+  function reqSpy(){ if(!spyTick){ spyTick=true; requestAnimationFrame(spy); } }
+  window.addEventListener('scroll',reqSpy,{passive:true}); window.addEventListener('resize',reqSpy);
+  spy();
+  setOn('home');
+
+  // reveals
+  function initMotion(){
+    if (!hasGsap || reduce) return;
+    var vh = window.innerHeight;
+    var items = Array.prototype.slice.call(document.querySelectorAll('.rv'));
+    var below = items.filter(function(el){ return el.getBoundingClientRect().top > vh*0.95; });
+    gsap.set(below,{opacity:0,y:36,force3D:true});
+    ScrollTrigger.batch(below,{
+      start:'top 94%', once:true, batchMax:6,
+      onEnter:function(b){ gsap.to(b,{opacity:1,y:0,duration:.75,ease:'power3.out',stagger:.09,overwrite:true,clearProps:'opacity,transform'}); }
+    });
+    // gentle scroll parallax on floating decor
+    gsap.utils.toArray('.hero-art, .oval .ph, .cn-art .ph, .hero-pearls').forEach(function(el){
+      gsap.to(el,{yPercent:-6,ease:'none',scrollTrigger:{trigger:el,start:'top bottom',end:'bottom top',scrub:.6}});
+    });
+  }
+  function start(){
+    initMotion();
+    var h=(location.hash||'').slice(1);
+    if (h && document.getElementById(h)) setTimeout(function(){ goTo(h,true); },120);
+  }
+  if (document.readyState==='complete') start(); else window.addEventListener('load', start);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ if(hasGsap) ScrollTrigger.refresh(); });
+  window.addEventListener('load', function(){ setTimeout(function(){ if(hasGsap) ScrollTrigger.refresh(); },400); });
+
+  // copy buttons
+  document.addEventListener('click', function(e){
+    var b = e.target.closest && e.target.closest('[data-copy]'); if(!b) return;
+    var txt = b.getAttribute('data-copy'), old = b.textContent;
+    function ok(){ b.textContent='Copied!'; setTimeout(function(){ b.textContent=old; },1400); }
+    function fallback(){
+      var r = document.createRange(), host = b.parentNode.querySelector('.v, span');
+      if (host){ r.selectNodeContents(host); var sel=getSelection(); sel.removeAllRanges(); sel.addRange(r); }
+      b.textContent='Select & copy'; setTimeout(function(){ b.textContent=old; },1800);
+    }
+    try { navigator.clipboard.writeText(txt).then(ok, fallback); } catch(err){ fallback(); }
+  });
+})();
+</script>
+
+</body>
+</html>
